@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1, maximum-scale=1">
+
+    <!---========== UNICORNS ========== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <title>Document</title>
+
+    <!---========== SWIPER CSS ========== -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!---========== CSS ========== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>cat portfolio.v1</title>
 </head>
+
 <body>
+    <!---========== HEADER ========== -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">CHRISTIAN ANTHONY</a>
 
             <div class="nav__menu" id="nav-menu">
-                
                 <ul class="nav__list grid">
+
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link active-link">
                             <i class="uil uil-estate nav__icon"></i> HOME
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> ABOUT
+                        <a href="#about" class="nav__link active-link">
+                            <i class=" uil uil-user nav__icon"></i> ABOUT
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#resume" class="nav__link">
+                        <a href="#resume" class="nav__link active-link">
                             <i class="uil uil-file-alt nav__icon"></i> RESUME
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#projects" class="nav__link"> 
+                        <a href="#projects" class="nav__link active-link">
                             <i class="uil uil-scenery nav__icon"></i> PROJECTS
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">
+                        <a href="#contact" class="nav__link active-link">
                             <i class="uil uil-message nav__icon"></i> CONTACT ME
                         </a>
                     </li>
@@ -49,6 +60,9 @@
             </div>
 
             <div class="nav__btns">
+                <!-- Theme Change Button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-bars"></i>
                 </div>
@@ -72,67 +86,239 @@
                     </div>
 
                     <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
                             <mask id="mask0" mask-type="alpha">
                                 <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
                                 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
                                 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
                             </mask>
                             <g mask="url(#mask0)">
                                 <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
                                 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/headshot.png"/>
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/headshot.png" />
                             </g>
                         </svg>
-                        
                     </div>
-                <div class="home__data">
-                    <h1 class="home__title">Hello, I'm Christian.</h1>
-                    <h3 class="home__subtitle">Electrical Engineering Major</h3>
-                    <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iste.</p>
-                    <a href="#contact" class="button button--flex">
-                        Contact Me <i class="uil uil-message button__icon"></i>
-                    </a>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Hello, I'm Christian.</h1>
+                        <h3 class="home__subtitle">Electrical Engineering Major</h3>
+                        <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                            iste.</p>
+                        <a href="#contact" class="button button--flex">
+                            Contact Me <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
 
-     <!--========== ABOUT ==========-->
-    <section class="about section" id="about">
-        <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">Lorem ipsum dolor sit.</span>
+        <!--========== ABOUT ==========-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">Lorem ipsum dolor sit.</span>
 
-        <div class="about__container container grid">
-            <img src="assets/img/about.jpg" alt="" class="about__img">
+            <div class="about__container container grid">
+                <img src="assets/img/about.jpg" alt="" class="about__img">
 
-            <div class="about__data">
-                <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laboriosam asperiores quidem consequatur eum ut nisi repudiandae explicabo fugiat voluptatem, voluptas porro praesentium alias! Eius.</p>
+                <div class="about__data">
+                    <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+                        laboriosam asperiores quidem consequatur eum ut nisi repudiandae explicabo fugiat voluptatem,
+                        voluptas porro praesentium alias! Eius.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-     <!--========== RESUME ==========-->
-    <section class="resume section" id="resume">
-        <div class="resume__container container">
-            <img src="assets/img/0001.jpeg" alt="" class="resume__img">
-            <div class="resume__button">
-                <a download="" href="assets/pdf/ctcv.pdf" class="button button--flex">
-                Download CV <i class="uil uil-download-alt"></i>
-                </a>
+        <!--========== RESUME ==========-->
+        <section class="resume section" id="resume">
+            <div class="resume__container container">
+                <img src="assets/img/0001.jpeg" alt="" class="resume__img">
+                <div class="resume__button">
+                    <a download="" href="assets/pdf/ctcv.pdf" class="button button--flex">
+                        Download CV <i class="uil uil-download-alt button__icon"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--========== PROJECTS ==========-->
+        <!--========== PROJECTS ==========-->
+        <section class="project section" id="project">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Lorem, ipsum dolor.</span>
 
-    <!--========== BLOG ==========-->
-    
+            <div class="project__container container swiper">
+                <div class="swiper-wrapper">
+                    <!--===== PROJECT 1 =====-->
+                    <div class="project__content grid swiper-slide">
+                        <img src="assets/img/project1.jpg" alt="" class="project__img">
+
+                        <div class="project__data">
+                            <h3 class="project__title">Place Holder 1.</h3>
+                            <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, eaque.</p>
+                            <a href="#" class="button button--flex button--small project__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--===== PROJECT 2 =====-->
+                    <div class="project__content grid swiper-slide">
+                        <img src="assets/img/project2.jpg" alt="" class="project__img">
+
+                        <div class="project__data">
+                            <h3 class="project__title">Place Holder 2.</h3>
+                            <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, eaque.</p>
+                            <a href="#" class="button button--flex button--small project__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--===== PROJECT 3 =====-->
+                    <div class="project__content grid swiper-slide">
+                        <img src="assets/img/project3.jpg" alt="" class="project__img">
+
+                        <div class="project__data">
+                            <h3 class="project__title">Place Holder 3.</h3>
+                            <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, eaque.</p>
+                            <a href="#" class="button button--flex button--small project__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right swiper-project-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left swiper-project-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--========== CONTACT ME ==========-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Lorem, ipsum dolor.</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Email Me</h3>
+                            <span class="contact__subtitle">christiantabile@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-linkedin-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Connect With Me On LinkedIn</h3>
+                            <span class="contact__subtitle">www.linkedin.com/in/catabile/</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name: </label>
+                            <input type="text" class="contact__input">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email: </label>
+                            <input type="email" class="contact__input">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Subject: </label>
+                            <input type="text" class="contact__input">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="" class="contact__input">Message: </label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="#" class="button button--flex">
+                            Send Message <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
-<script src="assets/js/main.js"></script>
+    <!--========== FOOTER ==========-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Christian Anthony</h1>
+                    <span class="footer__subtitle">Lorem, ipsum.</span>
+                </div>
+
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#home" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#resume" class="footer__link">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__profiles">
+                    <a href="https://www.linkedin.com/in/catabile/" target="_blank" class="footer__profile">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/christiantabile/" target="_blank" class="footer__profile">
+                        <i class="uil uil-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Christian Anthony Tabile. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!--========== SWIPER JS ==========-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
